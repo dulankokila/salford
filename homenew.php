@@ -1,10 +1,12 @@
 <?php
  require "connection.php";
-session_start();
-if (isset($_SESSION["u"])) {
+ session_start();
+if(isset($_SESSION["u"])){
+   
+$data = $_SESSION["u"];
 
-    ?>
-    <!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,6 +18,7 @@ if (isset($_SESSION["u"])) {
 
 <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="image/black.png" />
+    <link rel="stylesheet" href="bootstrap.css">
 
 </head>
 
@@ -45,6 +48,67 @@ if (isset($_SESSION["u"])) {
                             <div class="col-12">
                                 <button class="button">Create projects</button>
                             </div>
+                            <div class=" row col-12 mt-5">
+                       
+                           
+                            <div class="col-5">
+                            <h3>my projects</h3>
+                            </div>
+                            <div class="col-5 justify-content-center">
+                            <input type="text" class="form-control" placeholder="Searsh your projects">
+                            </div>
+                            <div class="col-12">
+                                <!-- search projects -->
+                            </div>
+
+                            </div>
+                            <div class=" row col-12 mt-5">
+                       
+                           
+                       <div class="col-5">
+                       <h6 class="fw-bold">members projects</h6>
+                       <div class="col-12">
+                        <?php
+                       
+                        
+                   $pro_rs =       Database::search("SELECT * FROM `projects` INNER JOIN `user_has_projects` ON projects.id=user_has_projects.projects_id INNER JOIN `user_role` ON user_role.id=user_has_projects.user_role_id WHERE `role`='member'");
+                   $pro_num =  $pro_rs->num_rows;
+                   $user_data = $pro_rs->fetch_assoc();
+
+                   for($x=0; $x<$pro_num; $x++){
+                    ?>
+                     <a href=""><?php  echo($user_data["name"]);?></a> <br>
+                    <?php
+                   }
+                        
+                   
+                        ?>
+                       </div>
+                       </div>
+                       <div class="col-5 justify-content-center">
+                       <h6 class="fw-bold">Admin projects</h6>
+                       </div>
+                       <div class="col-12">
+                       <?php
+                       
+                        
+                       $pro_rs =       Database::search("SELECT * FROM `projects` INNER JOIN `user_has_projects` ON projects.id=user_has_projects.projects_id INNER JOIN `user_role` ON user_role.id=user_has_projects.user_role_id WHERE `role`='Admin'");
+                       $pro_num =  $pro_rs->num_rows;
+                       $user_data = $pro_rs->fetch_assoc();
+    
+                       for($x=0; $x<$pro_num; $x++){
+                        ?>
+                         <a href=""><?php  echo($user_data["name"]);?></a> <br>
+                        <?php
+                       }
+                            
+                       
+                            ?>
+                       </div>
+
+                       </div>
+
+
                             
                         </div>
                     </div>
@@ -61,11 +125,9 @@ if (isset($_SESSION["u"])) {
 </body>
 
 </html>
-    <?php
+<?php
 }
 else{
-    echo("please login first");
+echo("Please login first");
 }
-    
 ?>
-

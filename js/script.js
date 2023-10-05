@@ -52,8 +52,8 @@ function signin() {
     if (r.readyState == 4) {
       var t = r.responseText;
       if (t == "sucess") {
-       alert(t);
-           window.location =  "homenew.php";
+        alert(t);
+          window.location =  "homenew.php";
       }
       else {
         alert(t);
