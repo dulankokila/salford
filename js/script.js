@@ -306,4 +306,46 @@ function updateProfile() {
 
   r.open("POST", "updateProfileProcess.php", true);
   r.send(f);
+}function send_msg(){
+  var recevr_mail = document.getElementById("rmail");
+  var msg_txt = document.getElementById("msg_txt");
+
+  alert(recevr_mail);
+  alert(msg_txt);
+
+
+  var f = new FormData();
+  f.append("rm",recevr_mail.innerHTML);
+  f.append("mt",msg_txt.value);
+
+  var r = new XMLHttpRequest();
+
+  r.onreadystatechange = function (){
+      if(r.readyState == 4){
+          var t = r.responseText;
+          if(t == "success"){
+              document.getElementById("chat_box").reload();
+          }else{
+              alert (t);
+          }
+      }
+  }
+
+  r.open("POST","sendMsgProcess.php",true);
+  r.send(f);
+}
+
+function viewMessages(email){
+  var r = new XMLHttpRequest();
+
+  r.onreadystatechange = function (){
+      if(r.readyState == 4){
+          var t = r.responseText;
+      
+          document.getElementById("chat_box").innerHTML = t;
+      }
+  }
+  
+  r.open("GET","viewMsgProcess.php?e="+email,true);
+  r.send();
 }

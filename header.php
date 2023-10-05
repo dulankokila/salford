@@ -23,8 +23,10 @@ $data = $_SESSION["u"];
                 <div class="col-5 col-lg-1 mt-1 text-white fw-bold" style="margin-left: 20px;"><a href="homenew.php"><img src="images/black.jpg" class="logo" /></a> SALFORD</div>
                 <a class="navbar-brand"></a>
                 <div class="mx-5"> <a href="userProfile.php"><i class="bi bi-person-circle text-white mx-5"></a></i>
-                <i class="bi bi-chat-left text-white"></i></div>
-                
+                <a href="chat.php"><i class="bi bi-chat-left text-white mx-5"></i></a>
+             
+             
+                <a href="signin.php"><i class="bi bi-box-arrow-in-right text-white mx-5"></i></a></div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
