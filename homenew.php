@@ -28,12 +28,12 @@ if (isset($_SESSION["u"])) {
             <div class="row">
 
 
-                <div class="col-12">
-                    <h1 class="mt-5 titel01">HOME</h1>
+                <div class="col-lg-12 col-lg-0">
+                    <h1 class="mt-5 titel01 fw-bold">HOME</h1>
 
                     <div class="row ms-4 d-flex justify-content-center">
 
-                        <div class="col-5 mx-3 rounded bg-dark ">
+                        <div class="col-d-none col-lg-5 mx-3 rounded bg-dark ">
                             <label class="text-center   text-white">News</label>
                             <div class="row m-3 ">
                                 <label class="mt-2 fw-bold text-white">
@@ -42,7 +42,7 @@ if (isset($_SESSION["u"])) {
                                 <img src="images/images/Pichai-says-some-employees-have-to-share-desks-and-offices-details-inside.webp">
                             </div>
                         </div>
-                        <div class="col-5 border border-3 rounded b1">
+                        <div class="col-d-none  col-lg-5  border border-3 rounded b1">
                             <div class="conatiner">
 
                                 <label class="text-center  rounded">Project</label>
@@ -66,10 +66,10 @@ if (isset($_SESSION["u"])) {
 
 
                                         <div class="col-5">
-                                            <h3>my projects</h3>
+                                            <h3 class="fw-bold">My Projects</h3>
                                         </div>
                                         <div class="col-5 justify-content-center">
-                                            <input type="text" class="form-control" placeholder="Searsh your projects">
+                                        
                                         </div>
                                         <div class="col-12">
                                             <!-- search projects -->
@@ -79,19 +79,19 @@ if (isset($_SESSION["u"])) {
                                     <div class=" row col-12 mt-5">
 
 
-                                        <div class="col-5">
-                                            <h6 class="fw-bold">members projects</h6>
+                                        <div class="col-4">
+                                            <h6 class="fw-bold">Membering projects</h6>
                                             <div class="col-12">
                                                 <?php
 
 
                                                 $pro_rs =       Database::search("SELECT * FROM `projects` INNER JOIN `user_has_projects` ON projects.id=user_has_projects.projects_id INNER JOIN `user_role` ON user_role.id=user_has_projects.user_role_id WHERE `role`='member'");
                                                 $pro_num =  $pro_rs->num_rows;
-                                                $user_data = $pro_rs->fetch_assoc();
+                                                $user_data1 = $pro_rs->fetch_assoc();
 
                                                 for ($x = 0; $x < $pro_num; $x++) {
                                                 ?>
-                                                    <a href=""><?php echo ($user_data["name"]); ?></a> <br>
+                                                    <a href=""><?php echo ($user_data1["name"]); ?> <br></a>
                                                 <?php
                                                 }
 
@@ -99,25 +99,36 @@ if (isset($_SESSION["u"])) {
                                                 ?>
                                             </div>
                                         </div>
-                                        <div class="col-5 justify-content-center">
+                                        <div class="col-4 justify-content-center">
                                             <h6 class="fw-bold">Admin projects</h6>
+
+                                            <div class="col-12">
+                                                <?php
+
+
+                                                $pro_rs =       Database::search("SELECT * FROM `projects` INNER JOIN `user_has_projects` ON projects.id=user_has_projects.projects_id INNER JOIN `user_role` ON user_role.id=user_has_projects.user_role_id WHERE `role`='Admin'");
+                                                $pro_num =  $pro_rs->num_rows;
+                                                $user_data2 = $pro_rs->fetch_assoc();
+
+                                                for ($x = 0; $x < $pro_num; $x++) {
+                                                ?>
+                                                    <a href="" class="text-dark"><?php echo ($user_data2["name"]); ?></a> <br>
+                                                <?php
+                                                }
+
+
+                                                ?>
+                                            </div>
+
                                         </div>
-                                        <div class="col-12">
-                                            <?php
+                                        <div class="col-4 justify-content-center">
+                                            <h6 class="fw-bold">All projects</h6>
 
+                                            <div class="col-12">
+                                            <a href="" class="text-dark"><?php echo ($user_data1["name"]); ?></a> <br>
+                                            <a href="" class="text-dark"><?php echo ($user_data2["name"]); ?></a> <br>
+                                            </div>
 
-                                            $pro_rs =       Database::search("SELECT * FROM `projects` INNER JOIN `user_has_projects` ON projects.id=user_has_projects.projects_id INNER JOIN `user_role` ON user_role.id=user_has_projects.user_role_id WHERE `role`='Admin'");
-                                            $pro_num =  $pro_rs->num_rows;
-                                            $user_data = $pro_rs->fetch_assoc();
-
-                                            for ($x = 0; $x < $pro_num; $x++) {
-                                            ?>
-                                                <a href=""><?php echo ($user_data["name"]); ?></a> <br>
-                                            <?php
-                                            }
-
-
-                                            ?>
                                         </div>
 
                                     </div>
@@ -134,32 +145,32 @@ if (isset($_SESSION["u"])) {
                             <div class="card mx-3" style="width: 18rem;">
                                 <img src="images/images/1649106561425.webp" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    
+
                                     <p class="card-text">Elon Exposes twitter as X.</p>
                                     <a href="#" class="btn btn-secondary">Find Out</a>
                                 </div>
                             </div>
-                       
-                      
+
+
                             <div class="card mx-3" style="width: 18rem;">
                                 <img src="images/images/5247b370-03c7-11ee-bff3-6eb6001555e5.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    
+
                                     <p class="card-text">Find Out ios 17 new Features.</p>
                                     <a href="#" class="btn btn-secondary">Find Out</a>
                                 </div>
                             </div>
-                       
+
 
                             <div class="card mx-3" style="width: 18rem;">
                                 <img src="images/images/media_1c9568bea14470395f2c881516fe1698dd9d1de47.jpeg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                
+
                                     <p class="card-text">Adobe Creative clouds are very Optimized now.</p>
                                     <a href="#" class="btn btn-secondary">Find Out</a>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
