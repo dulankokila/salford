@@ -29,7 +29,7 @@ if (isset($_SESSION["u"])) {
                 $new_file_extention = ".svg";
             }
 
-            $file_name = "images/profile_img/" . $_SESSION["u"]["name"] . "_" . uniqid() . $new_file_extention;
+            $file_name = "images/images/profile_img/" . $_SESSION["u"]["name"] . "_" . uniqid() . $new_file_extention;
 
             move_uploaded_file($image["tmp_name"], $file_name);
 

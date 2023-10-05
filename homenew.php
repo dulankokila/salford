@@ -39,7 +39,7 @@ if (isset($_SESSION["u"])) {
                                 <label class="mt-2 fw-bold text-white">
                                     Techies at Meta and Google do "fake work", alleges tech veteran | Tech
                                 </label>
-                                <img src="images/Pichai-says-some-employees-have-to-share-desks-and-offices-details-inside.webp">
+                                <img src="images/images/Pichai-says-some-employees-have-to-share-desks-and-offices-details-inside.webp">
                             </div>
                         </div>
                         <div class="col-5 border border-3 rounded b1">
@@ -132,7 +132,7 @@ if (isset($_SESSION["u"])) {
                     <div class="container ">
                         <div class="row mx-3">
                             <div class="card mx-3" style="width: 18rem;">
-                                <img src="images/1649106561425.webp" class="card-img-top" alt="...">
+                                <img src="images/images/1649106561425.webp" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     
                                     <p class="card-text">Elon Exposes twitter as X.</p>
@@ -142,7 +142,7 @@ if (isset($_SESSION["u"])) {
                        
                       
                             <div class="card mx-3" style="width: 18rem;">
-                                <img src="images/5247b370-03c7-11ee-bff3-6eb6001555e5.png" class="card-img-top" alt="...">
+                                <img src="images/images/5247b370-03c7-11ee-bff3-6eb6001555e5.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     
                                     <p class="card-text">Find Out ios 17 new Features.</p>
@@ -152,7 +152,7 @@ if (isset($_SESSION["u"])) {
                        
 
                             <div class="card mx-3" style="width: 18rem;">
-                                <img src="images/media_1c9568bea14470395f2c881516fe1698dd9d1de47.jpeg" class="card-img-top" alt="...">
+                                <img src="images/images/media_1c9568bea14470395f2c881516fe1698dd9d1de47.jpeg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                 
                                     <p class="card-text">Adobe Creative clouds are very Optimized now.</p>
