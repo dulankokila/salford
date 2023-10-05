@@ -34,29 +34,6 @@
             if (isset($_SESSION["u"])) {
 
                 $email = $_SESSION["u"]["email"];
-<<<<<<< Updated upstream
-=======
-
-
-                $details_rs = Database::search("SELECT * FROM `user`  WHERE `email`='" . $email . "'");
-
-                $image_rs = Database::search("SELECT * FROM `image` WHERE `user_email`='" . $email . "'");
-                $country_rs = Database::search("SELECT * FROM `user` INNER JOIN `country` ON 
-                country.id=user.country_id WHERE `email`='" . $email . "'");
-
-
-
-                $data = $details_rs->fetch_assoc();
-                $image_data = $image_rs->fetch_assoc();
-                $country_data = $country_rs->fetch_assoc();
-
-
-            ?>
-
-
-
-
->>>>>>> Stashed changes
 
 
                 $details_rs = Database::search("SELECT * FROM `user`  WHERE `email`='" . $email . "'");
@@ -87,7 +64,6 @@
 
                                 <div class="col-md-3 border-end">
                                     <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-<<<<<<< Updated upstream
                                         <?php
 
                                         if (empty($image_data["path"])) {
@@ -105,22 +81,13 @@
                                         }
 
                                         ?>
-=======
-
->>>>>>> Stashed changes
 
 
                                         <span class="fw-bold"> </span>
                                         <span class="fw-bold text-black-50"></span>
 
-<<<<<<< Updated upstream
                                         <input type="file" class="d-none" id="profileimg" accept="image/*" />
                                         <label for="profileimg" class="btn btn-secondary  mt-3" onclick="changeImage();">Update Profile Image</label>
-=======
-                                        <input type="file" class="d-none" /><img src="profile_img/profile.png" style="height: 200px;" />
-                                        <label for="profileimg" class="btn btn-primary mt-5">Update Profile Image</label>
-
->>>>>>> Stashed changes
                                     </div>
                                 </div>
 
@@ -135,30 +102,17 @@
 
                                             <div class="col-6">
                                                 <label class="form-label">Full Name</label>
-<<<<<<< Updated upstream
                                                 <input type="text" class="form-control" style="border-radius: 20px;" value="<?php echo $data["name"]; ?>" id="name"/>
                                             </div>
 
 
 
 
-=======
-                                                <input type="text" class="form-control" style="border-radius: 20px;" value="<?php echo $data["name"]; ?>"  />
-                                            </div>
-
-                                           
-
-                                           
->>>>>>> Stashed changes
 
                                             <div class="col-12">
                                                 <label class="form-label">Password</label>
                                                 <div class="input-group">
-<<<<<<< Updated upstream
                                                     <input type="password" class="form-control" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;" value="<?php echo $data["name"]; ?>"  />
-=======
-                                                    <input type="password" class="form-control" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;" value="<?php echo $data["name"]; ?>"/>
->>>>>>> Stashed changes
 
                                                     <span class="input-group-text bg-primary" style="border-bottom-right-radius: 20px;  border-top-right-radius: 20px">
                                                         <i class="bi bi-eye-slash-fill text-white secondary"></i>
@@ -168,20 +122,12 @@
 
                                             <div class="col-12">
                                                 <label class="form-label">Email</label>
-<<<<<<< Updated upstream
                                                 <input type="text" class="form-control disabled" style="border-radius: 20px;" value="<?php echo $data["email"]; ?> " id="email"/>
-=======
-                                                <input type="text" class="form-control disabled" style="border-radius: 20px;"value="<?php echo $data["email"]; ?> " />
->>>>>>> Stashed changes
                                             </div>
 
                                             <div class="col-12">
                                                 <label class="form-label">Country</label>
-<<<<<<< Updated upstream
                                                 <input type="text" class="form-control" style="border-radius: 20px;" value="<?php echo $country_data["name"]; ?> " id="country"/>
-=======
-                                                <input type="text" class="form-control" style="border-radius: 20px;" value="<?php echo $country_data["country_name"]; ?> " />
->>>>>>> Stashed changes
                                             </div>
 
 
