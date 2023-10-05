@@ -72,11 +72,7 @@
             Have an account?
             <a href="signin.php" class="signup-link">Sign In</a>
           </p>
-          <div class="row justify-content-center mt-5">
-            <img src="images/facebook.png" class="icon " /><img
-              src="images/google.png" class="icon " /><img
-              src="images/microsoft.png" class="icon " />
-          </div>
+          
         </div>
       </div>
     </div>
