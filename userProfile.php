@@ -86,8 +86,8 @@
                                         <span class="fw-bold"> </span>
                                         <span class="fw-bold text-black-50"></span>
 
-                                        <input type="file" class="d-none" /><img src="<?php echo $image_data["path"]; ?>" style="height: 200px;" class="rounded" id="viewImg"/>
-                                        <label for="profileimg" class="btn btn-secondary " onclick="changeImage();">Update Profile Image</label>
+                                        <input type="file" class="d-none" id="profileimg" accept="image/*" />
+                                        <label for="profileimg" class="btn btn-secondary  mt-3" onclick="changeImage();">Update Profile Image</label>
                                     </div>
                                 </div>
 
@@ -102,7 +102,7 @@
 
                                             <div class="col-6">
                                                 <label class="form-label">Full Name</label>
-                                                <input type="text" class="form-control" style="border-radius: 20px;" value="<?php echo $data["name"]; ?>" />
+                                                <input type="text" class="form-control" style="border-radius: 20px;" value="<?php echo $data["name"]; ?>" id="name"/>
                                             </div>
 
 
@@ -112,7 +112,7 @@
                                             <div class="col-12">
                                                 <label class="form-label">Password</label>
                                                 <div class="input-group">
-                                                    <input type="password" class="form-control" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;" value="<?php echo $data["name"]; ?>" />
+                                                    <input type="password" class="form-control" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;" value="<?php echo $data["name"]; ?>"  />
 
                                                     <span class="input-group-text bg-primary" style="border-bottom-right-radius: 20px;  border-top-right-radius: 20px">
                                                         <i class="bi bi-eye-slash-fill text-white secondary"></i>
@@ -122,17 +122,17 @@
 
                                             <div class="col-12">
                                                 <label class="form-label">Email</label>
-                                                <input type="text" class="form-control disabled" style="border-radius: 20px;" value="<?php echo $data["email"]; ?> " />
+                                                <input type="text" class="form-control disabled" style="border-radius: 20px;" value="<?php echo $data["email"]; ?> " id="email"/>
                                             </div>
 
                                             <div class="col-12">
                                                 <label class="form-label">Country</label>
-                                                <input type="text" class="form-control" style="border-radius: 20px;" value="<?php echo $country_data["name"]; ?> " />
+                                                <input type="text" class="form-control" style="border-radius: 20px;" value="<?php echo $country_data["name"]; ?> " id="country"/>
                                             </div>
 
 
                                             <div class="col-12 d-grid mt-3">
-                                                <button class="btn btn-secondary">Update My Profile</button>
+                                            <button class="btn btn-secondary btn-block mt-2" onclick="updateProfile();">Update</button>
                                             </div>
 
                                         </div>
@@ -158,7 +158,8 @@
 
 
     <script src="bootstrap.bundle.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    
 </body>
 
 </html>
