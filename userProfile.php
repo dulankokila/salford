@@ -17,7 +17,7 @@
     <link rel="icon" href="images/black.jpg" />
 </head>
 
-<body style="background-color: #040D12;">
+<body style="background-color: ffffff;">
 
     <div class="container-fluid">
         <div class="row">
@@ -56,23 +56,38 @@
 
 
 
-                <div class="col-12" style="background-color:#183D3D;">
+                <div class="col-12" style="background-color:fffff;">
                     <div class="row">
 
-                        <div class="col-10 offset-1 rounded mt-4 mb-4" style="background-color: #93B1A6;">
+                        <div class="col-10 offset-1 rounded mt-4 mb-4" style="background-color: #d6dcd8;">
                             <div class="row g-2">
 
                                 <div class="col-md-3 border-end">
                                     <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                                        <?php
 
+                                        if (empty($image_data["path"])) {
+
+                                        ?>
+                                            <img src="images/profile-5681750-4730492.webp" class="mt-5" style="width: 150px;" id="viewImg" />
+                                        <?php
+
+                                        } else {
+
+                                        ?>
+                                            <img src="<?php echo $image_data["path"]; ?>" class="rounded mt-5" style="width: 150px;" id="viewImg" />
+                                        <?php
+
+                                        }
+
+                                        ?>
 
 
                                         <span class="fw-bold"> </span>
                                         <span class="fw-bold text-black-50"></span>
 
-                                        <input type="file" class="d-none" /><img src="profile_img/profile.png" style="height: 200px;" />
-                                        <label for="profileimg" class="btn btn-primary mt-5">Update Profile Image</label>
-
+                                        <input type="file" class="d-none" /><img src="<?php echo $image_data["path"]; ?>" style="height: 200px;" class="rounded" id="viewImg"/>
+                                        <label for="profileimg" class="btn btn-secondary " onclick="changeImage();">Update Profile Image</label>
                                     </div>
                                 </div>
 
@@ -87,27 +102,27 @@
 
                                             <div class="col-6">
                                                 <label class="form-label">Full Name</label>
-                                                <input type="text" class="form-control" style="border-radius: 20px;" value="<?php echo $data["name"]; ?>"  />
+                                                <input type="text" class="form-control" style="border-radius: 20px;" value="<?php echo $data["name"]; ?>" />
                                             </div>
 
-                                           
 
-                                           
+
+
 
                                             <div class="col-12">
                                                 <label class="form-label">Password</label>
                                                 <div class="input-group">
-                                                    <input type="password" class="form-control" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;" value="<?php echo $data["name"]; ?>"/>
+                                                    <input type="password" class="form-control" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;" value="<?php echo $data["name"]; ?>" />
 
                                                     <span class="input-group-text bg-primary" style="border-bottom-right-radius: 20px;  border-top-right-radius: 20px">
-                                                        <i class="bi bi-eye-slash-fill text-white"></i>
+                                                        <i class="bi bi-eye-slash-fill text-white secondary"></i>
                                                     </span>
                                                 </div>
                                             </div>
 
                                             <div class="col-12">
                                                 <label class="form-label">Email</label>
-                                                <input type="text" class="form-control disabled" style="border-radius: 20px;"value="<?php echo $data["email"]; ?> " />
+                                                <input type="text" class="form-control disabled" style="border-radius: 20px;" value="<?php echo $data["email"]; ?> " />
                                             </div>
 
                                             <div class="col-12">
@@ -117,7 +132,7 @@
 
 
                                             <div class="col-12 d-grid mt-3">
-                                                <button class="btn btn-primary">Update My Profile</button>
+                                                <button class="btn btn-secondary">Update My Profile</button>
                                             </div>
 
                                         </div>

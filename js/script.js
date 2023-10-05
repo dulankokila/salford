@@ -219,3 +219,13 @@ function addMembers() {
 
 // Create task - add-members
 // Create task
+function changeImage() {
+  var view = document.getElementById("viewImg"); //img tag
+  var file = document.getElementById("profileimg"); //file chooser
+
+  file.onchange = function () {
+    var file1 = this.files[0];
+    var url = window.URL.createObjectURL(file1);
+    view.src = url;
+  };
+}
