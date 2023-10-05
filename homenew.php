@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php
+ require "connection.php";
+session_start();
+if (isset($_SESSION["u"])) {
+
+    ?>
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -55,3 +61,11 @@
 </body>
 
 </html>
+    <?php
+}
+else{
+    echo("please login first");
+}
+    
+?>
+
