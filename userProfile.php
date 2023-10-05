@@ -39,11 +39,14 @@
                 $details_rs = Database::search("SELECT * FROM `user`  WHERE `email`='" . $email . "'");
 
                 $image_rs = Database::search("SELECT * FROM `image` WHERE `user_email`='" . $email . "'");
+                $country_rs = Database::search("SELECT * FROM `user` INNER JOIN `country` ON 
+                country.id=user.country_id WHERE `email`='" . $email . "'");
+
 
 
                 $data = $details_rs->fetch_assoc();
                 $image_data = $image_rs->fetch_assoc();
-               
+                $country_data = $country_rs->fetch_assoc();
 
 
             ?>
@@ -104,12 +107,12 @@
 
                                             <div class="col-12">
                                                 <label class="form-label">Email</label>
-                                                <input type="text" class="form-control" style="border-radius: 20px;"value="<?php echo $data["email"]; ?>" />
+                                                <input type="text" class="form-control disabled" style="border-radius: 20px;"value="<?php echo $data["email"]; ?> " />
                                             </div>
 
                                             <div class="col-12">
-                                                <label class="form-label">Registered Date</label>
-                                                <input type="text" class="form-control" style="border-radius: 20px;" readonly />
+                                                <label class="form-label">Country</label>
+                                                <input type="text" class="form-control" style="border-radius: 20px;" value="<?php echo $country_data["country_name"]; ?> " />
                                             </div>
 
 
