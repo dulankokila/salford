@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="images/black.png" />
+  <link rel="icon" href="images/black.jpg" />
   <title>Signup to SALFORD</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,7 +20,7 @@
         <div id="signInForm" >
           <h2 class="text-center">Sign Up</h2>
           <div class="text-center mb-2">
-            <img src="images/profile-5681749-4730491.gif" class="gif" />
+            <img src="images/profile-5681750-4730492.webp" class="gif" />
           </div>
           <div class="form-group">
             <label for="username">Username:</label>
@@ -73,9 +73,9 @@
             <a href="signin.php" class="signup-link">Sign In</a>
           </p>
           <div class="row justify-content-center mt-5">
-            <img src="images/2993685_brand_brands_google_logo_logos_icon (1).png" class="icon " /><img
-              src="images/4202105_microsoft_logo_social_social media_icon.png" class="icon " /><img
-              src="images/5296499_fb_facebook_facebook logo_icon.png" class="icon " />
+            <img src="images/facebook.png" class="icon " /><img
+              src="images/google.png" class="icon " /><img
+              src="images/microsoft.png" class="icon " />
           </div>
         </div>
       </div>

@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="images/black.png" />
+ 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/black.jpg" />
   <title>Sign In</title>
 </head>
 
@@ -31,7 +32,7 @@ if (isset($_COOKIE["password"])) {
 }
 
 ?>
-          <div class="text-center mb-2"><img src="images/profile-5681749-4730491.gif" class="gif "> </div>
+          <div class="text-center mb-2"><img src="images/profile-5681750-4730492.webp" class="gif "> </div>
           <div class="form-group">
             <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?php echo $email;?>"  required>
           </div>
@@ -57,9 +58,9 @@ if (isset($_COOKIE["password"])) {
           <p class="mt-3 text-center">Don't have an account? <a href="signup.php" class="signup-link">Sign Up</a></p>
 
           <div class="row justify-content-center  mt-5"><img
-              src="images/2993685_brand_brands_google_logo_logos_icon (1).png" class="icon mx-3" /><img
-              src="images/4202105_microsoft_logo_social_social media_icon.png" class="icon mx-3" /><img
-              src="images/5296499_fb_facebook_facebook logo_icon.png" class="icon mx-3" /></div>
+              src="images/google.png" class="icon mx-3 " /><img
+              src="images/facebook.png" class="icon mx-3" /><img
+              src="images/microsoft.png" class="icon mx-3" /></div>
 
              
 </div>
